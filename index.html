@@ -237,14 +237,14 @@
             let dataCompra = document.getElementById('dataCompra').value
             let validade = document.getElementById('validade').value
 
-            let res = await fetch('http://localhost:8080/pesticida', {
+            let res = await fetch('https://projeto-milkshow.onrender.com/pesticida', {
                 method: "POST",
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify({ nome, valor, dataCompra, validade })
             })
         }
         async function montarDados() {
-            let response = await fetch('http://localhost:8080/pesticidas')
+            let response = await fetch('https://projeto-milkshow.onrender.com/pesticidas')
             let listaPesticidas = await response.json()
 
             let tabela = document.getElementById('tabela')
